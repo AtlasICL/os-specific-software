@@ -1,11 +1,40 @@
 \begin{frame}
 \frametitle{Graphics APIs}
 
-\begin{block}{Graphics APIs}
+\begin{block}{}
   \begin{itemize}
-    \item .
+    \setlength{\itemsep}{6pt}
+    \item Graphics APIs are software interfaces that allow programs to communicate with a computer’s GPU
+    \item Used for loading textures, applying shaders, and rendering 2D and 3D scenes
+    \item Applications do not communicate with the GPU directly
+    \item Application $\rightarrow$ Graphics API $\rightarrow$ GPU Driver $\rightarrow$ GPU
+  \end{itemize}
+
+\end{block}
+\vspace{9pt}
+
+\centering
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Graphics API} & \textbf{Windows} & \textbf{macOS} & \textbf{Linux} \\
+\hline
+DirectX & \checkmark & -- & -- \\
+Metal & -- & \checkmark & -- \\
+Vulkan & \checkmark & -- & \checkmark \\
+OpenGL & \checkmark & \checkmark & \checkmark \\
+\hline
+\end{tabular}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Graphics APIs}
+
+\begin{block}{Problems}
+  \begin{itemize}
+    \item
+
   \end{itemize}
 \end{block}
-
-
 \end{frame}

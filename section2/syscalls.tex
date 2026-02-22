@@ -1,10 +1,38 @@
+
 \begin{frame}
 \frametitle{System calls}
 
-\begin{block}{System calls}
+\begin{theorembox}
+\textbf{What are system calls?} \\
   \begin{itemize}
-    \item .
+    \setlength{\itemsep}{8pt}
+    \item The OS provides user programs access to hardware resources through \textbf{system calls}.
+    \item These allow programs to create windows, spawn processes, open files, etc...
   \end{itemize}
-\end{block}
+\end{theorembox}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{System calls}
+
+\begin{table}[ht]
+\setlength{\tabcolsep}{4pt} % default is usually 6pt
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+ & \textbf{Windows} & \textbf{Unix} \\ \hline
+Spawning a process    & \texttt{CreateProcess()}     & \texttt{fork()} + \texttt{exec()} \\ \hline
+Terminating a process & \texttt{ExitProcess()}       & \texttt{exit()} \\ \hline
+Creating a file       & \texttt{CreateFile()}        & \texttt{open()} \\ \hline
+Closing a file        & \texttt{CloseHandle()}       & \texttt{close()} \\ \hline
+Process management & \texttt{GetCurrent\-Process\-ID()} & \texttt{getpid()} \\ \hline
+Set file permissions  & \texttt{SetFileSecurity()}   & \texttt{chmod()} \\ \hline
+\end{tabularx}
+\caption{Comparison of Windows vs Unix system calls}
+\end{table}
 
 \end{frame}

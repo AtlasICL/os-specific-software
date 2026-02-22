@@ -1,8 +1,65 @@
 \documentclass{beamer}
-\title{Why is software OS-specific?}
-\author{Team name: NetworkStack}
+
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage[section]{placeins}
+\usepackage{subcaption}
+\usepackage{longtable}
+\usepackage{caption}
+
+\usepackage{tcolorbox}
+\newtcolorbox{exbox}{
+    colback=white, % background
+    colframe=black, % frame colour
+    boxrule=0.5pt,
+    arc=2mm, % rounded corners
+    left=6pt,right=6pt,top=6pt,bottom=6pt,
+    before skip=8pt,
+    after skip=12pt
+}
+\definecolor{myLightBlue}{RGB}{235,248,255} % light blue
+\definecolor{myDarkBlue}{RGB}{25,118,210} % dark blue
+\newtcolorbox{theorembox}{
+    colback=myLightBlue, % background
+    colframe=myDarkBlue, % frame colour
+    boxrule=0.5pt,
+    arc=2mm, % rounded corners
+    left=6pt,right=6pt,top=6pt,bottom=6pt,
+    before skip=10pt,
+    after skip=12pt
+}
+
+\definecolor{myLightRedBg}{RGB}{255,245,245}
+\definecolor{myLightRedAccent}{RGB}{214,17,17}
+\newtcolorbox{redbox}{
+    colback=myLightRedBg,
+    colframe=myLightRedAccent,
+    boxrule=0.5pt,
+    arc=2mm, % rounded corners
+    left=6pt,right=6pt,top=6pt,bottom=6pt,
+    before skip=10pt,
+    after skip=12pt
+}
+
+\definecolor{myLightYellowBg}{RGB}{250, 247, 227}
+\definecolor{myLightYellowAccent}{RGB}{250, 119, 5}
+\newtcolorbox{yellowbox}{
+    colback=myLightYellowBg,
+    colframe=myLightYellowAccent,
+    boxrule=0.5pt,
+    arc=2mm, % rounded corners
+    left=6pt,right=6pt,top=6pt,bottom=6pt,
+    before skip=10pt,
+    after skip=12pt
+}
+
+
+\title{Why is software OS-Specific?\\[0.3em]
+\large Or: How to write cross-platform software}
+\author{Team name: NetworkStack\\ \footnotesize{Emre Acarsoy, Luca Croci, Kazybek Khairulla, Luca Pacitti, Harry Taylor}}
 \institute{University of Exeter}
-\date{}
+\date{26/02/2026}
 
 \begin{document}
 
@@ -13,6 +70,8 @@
 \input{section1/intro}
 % Part 2 - Problem statement
 \input{section1/problem}
+% Part 3 - Overview of Operating Systems
+\input{section1/overview_OS}
 
 % Section 2 - Challenge / Problem - technical details
 % Part 1 - Syscalls
@@ -20,23 +79,21 @@
 % Part 2 - Graphics APIs
 \input{section2/graphics_apis}
 
-% Section 3 - Solutions
-% Part 1 - Translation layers
-\input{section3/translation_layers}
-% Part 2 - Electron 
-\input{section3/electron}
-% Part 3 - Virtualisation
-\input{section3/virtualisation}
+% Section 3 - Experience
+% Part 1 - User Experience
+\input{section3/ux}
+% Part 2 - Developer Experience
+\input{section3/dx}
 
-% Section 4 - Assessing solutions
-% Part 1 - Development experience
-\input{section4/dx}
-% Part 2 - User experience
-\input{section4/ux}
-% Case study 1
-\input{section4/case_study_1}
-% Case study 2
-\input{section4/case_study_2}
+% Section 4 - Solutions
+% Part 0 - Overview / plan for this section
+\input{section4/overview_of_sols}
+% Part 1 - Translation layers
+\input{section4/translation_layers}
+% Part 2 - Virtualisation
+\input{section4/virtualisation}
+% Part 3 - Electron 
+\input{section4/electron}
 
 % Section 5 - Conclusion
 % Brief summary

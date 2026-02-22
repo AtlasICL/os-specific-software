@@ -1,0 +1,56 @@
+
+\begin{frame}
+\frametitle{Solutions - Translation layers - Wine and Proton}
+\begin{redbox}
+\textbf{Wine} ("Wine Is Not an Emulator")
+\vspace{5pt}
+\begin{itemize}
+    \setlength{\itemsep}{8pt}
+    \item Wine is an open source compatibility layer for running Windows software on unix-like systems (MacOS, Linux)
+    \item Works based on reverse engineering the Windows kernel
+    \item Runs on the fly in user space, using wineserver daemon 
+\end{itemize}
+\end{redbox}
+\begin{yellowbox}
+\textbf{Proton}
+\vspace{5pt}
+\begin{itemize}
+    \setlength{\itemsep}{8pt}
+    \item Proton is a fork of wine bundled with other software, such as VKD3D, a translation layer for DirectX $\rightarrow$ Vulkan
+    \item Proton runs out of the box (using Steam Play)
+\end{itemize}
+\end{yellowbox}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Wine and Proton - Advantages and Disadvantages}
+\begin{theorembox}
+\textbf{Advantages}
+\begin{itemize}
+    \item Minimal input from the developer to port their system using wine or proton
+    \item Lower performance overhead as wine/proton acts as a translation layer, and not a full virtual machine
+    \item Open source
+\end{itemize}
+\end{theorembox}
+\begin{redbox}
+\textbf{Disadvantages}
+\begin{itemize}
+    \item Apps often don't work out of the box, requiring configuration (improved with proton)
+    \item Not all software runs perfectly, if at all
+\end{itemize}
+\end{redbox}
+\end{frame}
+
+\begin{frame}
+\frametitle{Wine and Proton - Evaluation}
+\begin{theorembox}
+\begin{itemize}
+    \setlength{\itemsep}{8pt}
+    \item \textbf{Stability} - Stability is high, with occasional crashes for misconfigured/incompatible applications
+    \item \textbf{Performance} - Marginal effect on performance $<$5\%
+    \item \textbf{Features} - Lack of driver support and limited anti-cheat systems as kernel level access cannot be granted.
+    \item \textbf{Updates} - Major updates for wine occur roughly every year, Major updates for proton occur every 6-12 months
+\end{itemize}
+\end{theorembox}
+\end{frame}

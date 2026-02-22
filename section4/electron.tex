@@ -1,0 +1,56 @@
+\begin{frame}
+\frametitle{Solutions - Electron}
+\begin{redbox}
+\textbf{Electron}
+\begin{itemize}
+    \setlength{\itemsep}{8pt}
+    \item Open source framework for building cross-platform desktop applications with a JavaScript runtime
+    \item 1 language for Windows, Linux and MacOS
+    \item Translates web interfaces into desktop software rather than translating system calls
+\end{itemize}
+\end{redbox}
+\begin{exbox}
+\textbf{Examples}
+\begin{itemize}
+    \item VS Code, Discord, Slack
+
+\end{itemize}
+\end{exbox}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Electron - Advantages and Disadvantages}
+\begin{theorembox}
+\textbf{Advantages}
+\begin{itemize}
+    \item Cross-platform support for Windows, Linux and MacOS
+    \item Shared web and desktop code $\rightarrow$ code reusability
+    \item Open source
+\end{itemize}
+\end{theorembox}
+\begin{redbox}
+\textbf{Disadvantages}
+\begin{itemize}
+    \item High memory usage: Chromium and the JavaScript runtime remain active even when idle
+    \item Lower performance than native applications, making apps feel bloated or less responsive
+    \item Large file sizes as Chromium and Node.js are bundled with every application
+\end{itemize}
+\end{redbox}
+\end{frame}
+
+\begin{frame}
+\frametitle{Electron - Evaluation}
+\begin{theorembox}
+\begin{itemize}
+    \setlength{\itemsep}{8pt}
+    \item \textbf{Stability} - Generally stable, but performance can degrade in poorly optimised applications
+    \item \textbf{Performance} - Depends on browser rendering and JavaScript execution; complex layouts and heavy animations increase CPU and GPU usage
+    \item \textbf{Features} - Limited access to low-level system features due to abstraction over native APIs
+    \item \textbf{Updates} - Frequent updates through built-in updaters, often involving large downloads
+    \item \textbf{File Size} - Electron applications are often very large (300MB +)
+    % Say this out loud not on slides
+    % my own Electron proxy tester exceeded 300MB despite being relatively simple
+\end{itemize}
+\end{theorembox}
+\end{frame}

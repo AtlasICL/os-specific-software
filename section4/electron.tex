@@ -4,8 +4,8 @@
 \textbf{Electron}
 \begin{itemize}
     \setlength{\itemsep}{8pt}
-    \item Open source framework for building cross-platform desktop applications with a JavaScript runtime
-    \item 1 language for Windows, Linux and MacOS
+    \item Open source framework for building cross-platform desktop applications with a JavaScript runtime \cite{electron-why-page}
+    \item 1 language for Windows, Linux and MacOS \cite{electron-why-page}
     \item Translates web interfaces into desktop software rather than translating system calls
 \end{itemize}
 \end{redbox}
@@ -24,7 +24,7 @@
 \begin{theorembox}
 \textbf{Advantages}
 \begin{itemize}
-    \item Cross-platform support for Windows, Linux and MacOS
+    \item Cross-platform support for Windows, Linux, and MacOS
     \item Shared web and desktop code $\rightarrow$ code reusability
     \item Open source
 \end{itemize}
@@ -32,25 +32,57 @@
 \begin{redbox}
 \textbf{Disadvantages}
 \begin{itemize}
-    \item High memory usage: Chromium and the JavaScript runtime remain active even when idle
-    \item Lower performance than native applications, making apps feel bloated or less responsive
-    \item Large file sizes as Chromium and Node.js are bundled with every application
+    \item High memory usage $\rightarrow$ lower performance compared to native applications
+    % say because Chromium and the JavaScript runtime remain active even when idle
+    \item Large file sizes $\rightarrow$ Chromium and Node.js are bundled with every application
 \end{itemize}
 \end{redbox}
 \end{frame}
 
 \begin{frame}
+
+% \begin{theorembox}
+% \begin{itemize}
+%     \setlength{\itemsep}{8pt}
+
+%     % Say this out loud not on slides
+%     % my own Electron proxy tester exceeded 300MB despite being relatively simple
+% \end{itemize}
+% \end{theorembox}
+
 \frametitle{Electron - Evaluation}
-\begin{theorembox}
-\begin{itemize}
-    \setlength{\itemsep}{8pt}
-    \item \textbf{Stability} - Generally stable, but performance can degrade in poorly optimised applications
-    \item \textbf{Performance} - Depends on browser rendering and JavaScript execution; complex layouts and heavy animations increase CPU and GPU usage
-    \item \textbf{Features} - Limited access to low-level system features due to abstraction over native APIs
-    \item \textbf{Updates} - Frequent updates through built-in updaters, often involving large downloads
-    \item \textbf{File Size} - Electron applications are often very large (300MB +)
-    % Say this out loud not on slides
-    % my own Electron proxy tester exceeded 300MB despite being relatively simple
-\end{itemize}
-\end{theorembox}
+
+\vspace{-30pt}
+\begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+        \begin{theorembox}
+        \textbf{User experience}
+        \vspace{5pt}
+        \begin{itemize}
+            \setlength{\itemsep}{4pt}
+            \item \textbf{Stability}: Can degrade in  unoptimised applications
+            \item \textbf{Performance}: Complex layouts and heavy animations increase CPU and GPU usage
+            \item \textbf{Features}: Poor support for low-latency tasks (e.g: trading)
+            \item \textbf{Updates}: Frequent updates through built-in updaters, often involving large downloads
+        \end{itemize}
+        \vspace{4pt}
+        \end{theorembox}
+    \end{column}
+
+    \begin{column}{0.49\textwidth}
+        \begin{theorembox}
+        \textbf{Developer experience}
+        \vspace{5pt}
+        \begin{itemize}            
+            \setlength{\itemsep}{4pt}
+            \item \textbf{Development Time}: Efficient
+            \item \textbf{Additional Expertise}: Helpful to understand Electron and web development languages
+            \item \textbf{Maintenance}: Moderate
+        \end{itemize}
+        \vspace{78pt}
+        \end{theorembox}
+    \end{column}
+\end{columns}
+
+
 \end{frame}

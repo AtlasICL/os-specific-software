@@ -1,21 +1,13 @@
-
 \begin{frame}
 \frametitle{System calls}
 
-\begin{theorembox}
-\textbf{What are system calls?} \\
-  \begin{itemize}
-    \setlength{\itemsep}{8pt}
-    \item The OS provides user programs access to hardware resources through \textbf{system calls}.
-    \item These allow programs to create windows, spawn processes, open files, etc...
-  \end{itemize}
-\end{theorembox}
-
-\end{frame}
-
-
-\begin{frame}
-\frametitle{System calls}
+% \begin{theorembox}
+%   \begin{itemize}
+%     \setlength{\itemsep}{8pt}
+%     \item The OS provides user programs access to hardware resources through \textbf{system calls} \cite{ArpaciDusseau18-Book}.
+%     \item These allow programs to create windows, spawn processes, open files, etc...
+%   \end{itemize}
+% \end{theorembox}
 
 \begin{table}[ht]
 \setlength{\tabcolsep}{4pt} % default is usually 6pt
@@ -32,7 +24,7 @@ Closing a file        & \texttt{CloseHandle()}       & \texttt{close()} \\ \hlin
 Process management & \texttt{GetCurrent\-Process\-ID()} & \texttt{getpid()} \\ \hline
 Set file permissions  & \texttt{SetFileSecurity()}   & \texttt{chmod()} \\ \hline
 \end{tabularx}
-\caption{Comparison of Windows vs Unix system calls}
+\caption{Comparison of Windows vs Unix system calls \cite{linux-syscalls} \cite{linux-iface} \cite{windows-syscalls-blog}}
 \end{table}
 
 \end{frame}

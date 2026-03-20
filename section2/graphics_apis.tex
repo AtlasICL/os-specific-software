@@ -1,17 +1,23 @@
 \begin{frame}
 \frametitle{Graphics APIs}
 
-\begin{block}{}
+\begin{block}{Overview}
   \begin{itemize}
-    \setlength{\itemsep}{6pt}
-    \item Graphics APIs are software interfaces that allow programs to communicate with a computer’s GPU
-    \item Used for loading textures, applying shaders, and rendering 2D and 3D scenes
-    \item Applications do not communicate with the GPU directly
-    \item Application $\rightarrow$ Graphics API $\rightarrow$ GPU Driver $\rightarrow$ GPU
+  \setlength{\itemsep}{6pt}
+    \item Interface between software and the GPU.
+    \item Graphics APIs are used for displaying visuals \cite{graphics-library-wikipedia}.
   \end{itemize}
+
+  \begin{block}{Problem}
+  \begin{itemize}
+    \item Many popular graphics APIs are not available on all major operating systems.
+    \item For cross-compatibility, developers must rewrite rendering layers for other APIs \cite{rendering-layers}.
+  \end{itemize}
+\end{block}
 
 \end{block}
 \vspace{9pt}
+
 
 \centering
 \begin{tabular}{|l|c|c|c|c|}
@@ -23,18 +29,6 @@ Metal & -- & \checkmark & -- \\
 Vulkan & \checkmark & -- & \checkmark \\
 OpenGL & \checkmark & \checkmark & \checkmark \\
 \hline
+
 \end{tabular}
-
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Graphics APIs}
-
-\begin{block}{Problems}
-  \begin{itemize}
-    \item
-
-  \end{itemize}
-\end{block}
 \end{frame}

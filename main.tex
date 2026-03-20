@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[aspectratio=169]{beamer}
 
 \usepackage{tabularx}
 \usepackage{array}
@@ -10,6 +10,7 @@
 
 \usepackage{tcolorbox}
 \newtcolorbox{exbox}{
+    width=\linewidth,
     colback=white, % background
     colframe=black, % frame colour
     boxrule=0.5pt,
@@ -21,6 +22,7 @@
 \definecolor{myLightBlue}{RGB}{235,248,255} % light blue
 \definecolor{myDarkBlue}{RGB}{25,118,210} % dark blue
 \newtcolorbox{theorembox}{
+    width=\linewidth,
     colback=myLightBlue, % background
     colframe=myDarkBlue, % frame colour
     boxrule=0.5pt,
@@ -33,6 +35,7 @@
 \definecolor{myLightRedBg}{RGB}{255,245,245}
 \definecolor{myLightRedAccent}{RGB}{214,17,17}
 \newtcolorbox{redbox}{
+    width=\linewidth,
     colback=myLightRedBg,
     colframe=myLightRedAccent,
     boxrule=0.5pt,
@@ -45,6 +48,7 @@
 \definecolor{myLightYellowBg}{RGB}{250, 247, 227}
 \definecolor{myLightYellowAccent}{RGB}{250, 119, 5}
 \newtcolorbox{yellowbox}{
+    width=\linewidth,
     colback=myLightYellowBg,
     colframe=myLightYellowAccent,
     boxrule=0.5pt,
@@ -53,6 +57,10 @@
     before skip=10pt,
     after skip=12pt
 }
+
+% References
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{references.bib}
 
 
 \title{Why is software OS-Specific?\\[0.3em]
@@ -96,9 +104,23 @@
 \input{section4/electron}
 
 % Section 5 - Conclusion
-% Brief summary
 \input{section5/summary}
-% Conclusion, and future outlook
-\input{section5/conclusion}
+
+\begin{frame}[allowframebreaks]{References}
+\printbibliography
+\end{frame}
+
+\begin{frame}{Individual contribution allocation}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Team member & Contribution \\ \hline
+Emre Acarsoy & 25\% \\ \hline
+Luca Croci & 15\% \\ \hline
+Kazybek Khairulla & 10\% \\ \hline
+Luca Pacitti & 25\% \\ \hline
+Harry Taylor & 25\% \\ \hline
+\end{tabular}
+\end{frame}
 
 \end{document}

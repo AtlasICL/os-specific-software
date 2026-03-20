@@ -6,9 +6,9 @@
 \vspace{5pt}
 \begin{itemize}
     \setlength{\itemsep}{8pt}
-    \item Wine is an open source compatibility layer for running Windows software on unix-like systems (MacOS, Linux)
-    \item Works based on reverse engineering the Windows kernel
-    \item Runs on the fly in user space, using wineserver daemon 
+    \item Wine is an open source compatibility layer for running Windows software on unix-like systems (MacOS, Linux)  \cite{wine_wikipedia}
+    \item Works based on reverse engineering the Windows kernel \cite{wine_wikipedia}
+    \item Runs on the fly in user space, using wineserver daemon \cite{wine_wikipedia}
 \end{itemize}
 \end{redbox}
 \begin{yellowbox}
@@ -16,8 +16,8 @@
 \vspace{5pt}
 \begin{itemize}
     \setlength{\itemsep}{8pt}
-    \item Proton is a fork of wine bundled with other software, such as VKD3D, a translation layer for DirectX $\rightarrow$ Vulkan
-    \item Proton runs out of the box (using Steam Play)
+    \item Proton is a fork of wine bundled with other software, such as VKD3D, a translation layer for DirectX $\rightarrow$ Vulkan \cite{proton_wikipedia}
+    \item Proton runs out of the box (using Steam Play) \cite{steam}
 \end{itemize}
 \end{yellowbox}
 
@@ -44,13 +44,36 @@
 
 \begin{frame}
 \frametitle{Wine and Proton - Evaluation}
-\begin{theorembox}
-\begin{itemize}
-    \setlength{\itemsep}{8pt}
-    \item \textbf{Stability} - Stability is high, with occasional crashes for misconfigured/incompatible applications
-    \item \textbf{Performance} - Marginal effect on performance $<$5\%
-    \item \textbf{Features} - Lack of driver support and limited anti-cheat systems as kernel level access cannot be granted.
-    \item \textbf{Updates} - Major updates for wine occur roughly every year, Major updates for proton occur every 6-12 months
-\end{itemize}
-\end{theorembox}
+
+\vspace{-30pt}
+\begin{columns}[T,onlytextwidth]
+    \begin{column}{0.49\textwidth}
+        \begin{theorembox}
+        \textbf{User experience}
+        \vspace{5pt}
+        \begin{itemize}
+            \setlength{\itemsep}{4pt}
+            \item \textbf{Stability}: Stability is high, with occasional crashes for misconfigured/incompatible applications
+            \item \textbf{Performance}: $<$ 15\% effect on performance \cite{Comp_intelligence}
+            \item \textbf{Features}: Lack of driver support and limited anti-cheat \cite{driver-research}
+            \item \textbf{Updates}: Major updates every year \cite{wine_gitlab}
+        \end{itemize}
+        \end{theorembox}
+    \end{column}
+
+    \begin{column}{0.49\textwidth}
+        \begin{theorembox}
+        \textbf{Developer experience}
+        \vspace{5pt}
+        \begin{itemize}
+            \setlength{\itemsep}{4pt}
+            \item \textbf{Development Time}: Small increase with Wine specific testing
+            \item \textbf{Additional Expertise}: Wine debugging and winetrick configs
+            \item \textbf{Maintenance}: Testing for each major wine version
+        \end{itemize}
+        \vspace{42pt}
+        \end{theorembox}
+    \end{column}
+\end{columns}
+
 \end{frame}
